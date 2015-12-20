@@ -56,8 +56,6 @@
 
      :component-did-mount (fn []
                             (let [d3data (clj->js data)]
-                              (println "didmount! " (str data))
-                              (println "didmount! " (str d3data))
                               (.. js/d3
                                   (select "svg")
                                   (selectAll "circle")
@@ -72,9 +70,6 @@
      :component-did-update (fn [this]
                              (let [[_ data] (reagent/argv this)
                                    d3data (clj->js data)]
-                               (println "in did-update!")
-                               (println "in did-update! data " data)
-                               (println "in did-update! d3data " d3data)
                                (.. js/d3
                                    (selectAll "circle")
                                    (data d3data)
