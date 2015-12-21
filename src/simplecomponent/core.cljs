@@ -61,7 +61,7 @@
                                   (selectAll "circle")
                                   (data d3data)
                                   enter
-                                  (append "svg:circle")
+                                  (append "circle")
                                   (attr "cx" (fn [d] (.-x d)))
                                   (attr "cy" (fn [d] (.-y d)))
                                   (attr "r" (fn [d] (.-r d)))
